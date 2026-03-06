@@ -1,0 +1,24 @@
+# Environments
+.env
+.env.local
+.env.*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.venv/
+alembic_upgrade*.log
+
+# Node
+node_modules/
+dist/
+.next/
+build/
+.pnp.*
+
+# Gemini/Agent
+.gemini/
+.DS_Store

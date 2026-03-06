@@ -41,12 +41,12 @@ Xây dựng nền tảng phân tích thị trường tài chính & hỗ trợ gi
 ### Must-Have (P0) — MVP
 | # | Tính năng | Phase |
 |---|-----------|-------|
-| 1 | JWT Authentication | Phase 1 |
+| 1 | Supabase Authentication | Phase 1 |
 | 2 | Bảng giá Real-time | Phase 3 |
 | 3 | Biểu đồ kỹ thuật | Phase 3 |
 | 4 | Portfolio Management | Phase 3 |
 | 5 | Paper Trading | Phase 3 |
-| 6 | Hệ thống phân quyền | Phase 3 |
+| 6 | Hệ thống phân quyền (Supabase RLS/Claims) | Phase 3 |
 
 ### Should-Have (P1)
 | # | Tính năng | Phase |
@@ -77,13 +77,13 @@ Xây dựng nền tảng phân tích thị trường tài chính & hỗ trợ gi
 
 | Layer | Công nghệ |
 |-------|-----------|
-| Frontend | Next.js 14+, TypeScript, TailwindCSS |
-| Backend | **Python 3.12+, FastAPI, SQLAlchemy 2.0** |
+| Frontend | Next.js 14+, TypeScript, TailwindCSS, Supabase JS |
+| Backend | **Python 3.12+, FastAPI, SQLAlchemy 2.0 (async)** |
 | AI/ML | PyTorch, Transformers, Stable Baselines3 |
-| Database | PostgreSQL, TimescaleDB, Redis |
+| Database/BaaS| **Supabase (PostgreSQL 17, Auth, pg_partman)**, Redis |
 | Streaming | Apache Kafka, python-socketio |
 | Payment | Stripe |
-| Infra | Docker, Nginx, GitHub Actions |
+| Infra | Supabase Cloud, Docker (Backend), Vercel (Frontend) |
 
 ## 6. Tiêu chí chấp nhận
 

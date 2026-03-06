@@ -25,11 +25,11 @@ main ─────────────────────────
         ├── feat/project-setup          Phase 1 (Foundation)
         ├── feat/docker-infrastructure
         ├── feat/database-schema
-        ├── feat/jwt-authentication
+        ├── feat/supabase-authentication
         │
         ├── feat/kafka-pipeline          Phase 2 (Data Pipeline)
         ├── feat/websocket-server
-        ├── feat/timescaledb-setup
+        ├── feat/pg-partman-setup
         │
         ├── feat/realtime-price-table    Phase 3 (Web Features)
         ├── feat/trading-charts
@@ -74,7 +74,7 @@ main ─────────────────────────
 | `feat/project-setup` | Khởi tạo Next.js + FastAPI | `feat: khởi tạo nextjs frontend`, `feat: tạo fastapi app skeleton` |
 | `feat/docker-infrastructure` | Docker Compose services | `feat: thêm postgres + redis docker`, `feat: thêm kafka + timescaledb` |
 | `feat/database-schema` | SQLAlchemy models + Alembic | `feat: tạo model User`, `feat: tạo model Portfolio, Holding`, `feat: tạo migration initial` |
-| `feat/jwt-authentication` | Register, Login, Guards | `feat: thêm security module (JWT)`, `feat: tạo api đăng ký`, `feat: tạo api đăng nhập`, `feat: thêm role-based guard` |
+| `feat/supabase-authentication` | Supabase Auth Integration | `feat: thêm security middleware`, `feat: tích hợp supabase jwt verification`, `feat: thêm role-based guard (RLS/Claims)` |
 
 ### Phase 2: Data Pipeline (Tuần 3-4)
 
@@ -82,7 +82,7 @@ main ─────────────────────────
 |--------|-----------|-----------------|
 | `feat/kafka-pipeline` | Binance → Kafka producers | `feat: tạo binance websocket producer`, `feat: tạo yahoo finance producer`, `feat: tạo news rss producer` |
 | `feat/websocket-server` | Socket.IO server | `feat: tạo socket.io async server`, `feat: thêm subscribe/broadcast rooms` |
-| `feat/timescaledb-setup` | Hypertable + aggregates | `feat: tạo market_prices hypertable`, `feat: thêm ohlcv continuous aggregate`, `feat: tạo kafka consumer → timescaledb` |
+| `feat/pg-partman-setup` | PostgreSQL Native Partitioning | `feat: tạo market_prices partitioned table`, `feat: cấu hình pg_partman`, `feat: tạo kafka consumer → postgres` |
 
 ### Phase 3: Web Features (Tuần 5-8)
 

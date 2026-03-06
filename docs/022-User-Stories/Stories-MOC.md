@@ -32,7 +32,7 @@ updated: 2026-03-07
 | F1.1 | Project setup (Next.js + FastAPI) | `feat/project-setup` | ⬜ TODO | |
 | F1.2 | Docker infrastructure | `feat/docker-infrastructure` | ⬜ TODO | |
 | F1.3 | Database schema (SQLAlchemy) | `feat/database-schema` | ⬜ TODO | Depends: F1.2 |
-| F1.4 | JWT Authentication | `feat/jwt-authentication` | ⬜ TODO | Depends: F1.3 |
+| F1.4 | Supabase Authentication | `feat/supabase-authentication` | ⬜ TODO | Depends: F1.3 |
 
 ---
 
@@ -44,7 +44,7 @@ updated: 2026-03-07
 |---|-----------|--------|-----------|---------|
 | F2.1 | Kafka pipeline (producers) | `feat/kafka-pipeline` | ⬜ TODO | Depends: F1.2 |
 | F2.2 | WebSocket server | `feat/websocket-server` | ⬜ TODO | Depends: F1.1 |
-| F2.3 | TimescaleDB + consumers | `feat/timescaledb-setup` | ⬜ TODO | Depends: F2.1 |
+| F2.3 | PostgreSQL Partitioning | `feat/pg-partman-setup` | ⬜ TODO | Depends: F2.1 |
 
 ---
 

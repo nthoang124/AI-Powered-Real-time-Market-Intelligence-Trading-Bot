@@ -14,7 +14,7 @@ updated: 2026-03-07
 > Implements: [[PRD-AI-Trading-Bot]] | Timeline: **Tuần 1-2**
 
 ## Mục tiêu
-Dựng skeleton dự án, Docker services, database schema, và JWT authentication.
+Dựng skeleton dự án, Docker services, database schema, và Supabase authentication.
 
 ## Stories
 
@@ -36,17 +36,17 @@ Dựng skeleton dự án, Docker services, database schema, và JWT authenticati
 ### F1.2: Docker Infrastructure
 - **Branch**: `feat/docker-infrastructure`
 - **Trạng thái**: ⬜ TODO
-- **Mô tả**: Docker Compose cho PostgreSQL, TimescaleDB, Redis, Kafka
+- **Mô tả**: Docker Compose cho PostgreSQL (có pg_partman), Redis, Kafka
 - **Tasks**:
   - [ ] Tạo `docker-compose.dev.yml`
-  - [ ] PostgreSQL 16 + TimescaleDB
+  - [ ] PostgreSQL 16 + pg_partman
   - [ ] Redis 7 Alpine
   - [ ] Kafka + Zookeeper
   - [ ] Tạo `.env.example`
 - **Commits dự kiến**:
   - `feat: thêm postgres + redis docker`
   - `feat: thêm kafka + zookeeper`
-  - `feat: thêm timescaledb service`
+  - `feat: cấu hình pg_partman extension`
 
 ### F1.3: Database Schema
 - **Branch**: `feat/database-schema`
@@ -66,22 +66,22 @@ Dựng skeleton dự án, Docker services, database schema, và JWT authenticati
   - `feat: tạo model Alert`
   - `feat: tạo alembic migration initial`
 
-### F1.4: JWT Authentication
-- **Branch**: `feat/jwt-authentication`
+### F1.4: Supabase Authentication
+- **Branch**: `feat/supabase-authentication`
 - **Trạng thái**: ⬜ TODO
 - **Dependencies**: F1.3 (User model)
-- **Mô tả**: Register, Login, JWT tokens, Role guards
+- **Mô tả**: Middleware xác thực Supabase JWT tokens, Role guards (RLS/Claims)
 - **Tasks**:
-  - [ ] `core/security.py` — hash, verify, create_token, decode_token
-  - [ ] `dependencies.py` — get_current_user, require_premium
-  - [ ] `api/auth.py` — POST /register, POST /login
-  - [ ] Pydantic schemas (UserCreate, TokenResponse)
+  - [ ] `core/security.py` — config supabase jwt public key / verify_token
+  - [ ] `dependencies.py` — get_current_user middleware, require_premium
+  - [ ] Tích hợp Supabase JS bên Frontend (Login UI)
+  - [ ] Đồng bộ user (Webhook hoặc Trigger từ Supabase Auth qua public schema)
   - [ ] Tests: auth happy path + error cases
 - **Commits dự kiến**:
-  - `feat: thêm security module (JWT + bcrypt)`
-  - `feat: tạo api đăng ký`
-  - `feat: tạo api đăng nhập`
+  - `feat: thêm security middleware (Supabase JWT)`
+  - `feat: tạo dependency get_current_user`
   - `feat: thêm role-based guard (require_premium)`
+  - `feat: tạo logic đồng bộ user từ Supabase Auth`
   - `test: thêm auth tests`
 
 ## Quality Gate
