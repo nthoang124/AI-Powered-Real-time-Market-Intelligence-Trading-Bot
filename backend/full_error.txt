@@ -1,0 +1,963 @@
+alembic : Traceback 
+(most recent call 
+last):
+At line:1 char:56
++ ... 
+Scripts\activate; 
+set PYTHONPATH=.; 
+alembic upgrade 
+head 2>&1 | Out-F 
+...
++                   
+                    
+  ~~~~~~~~~~~~~~~~~~
+~~~~~~~
+    + CategoryInfo  
+            : NotS  
+  pecified: (Trac   
+ eback (most rec    
+ent call last):    
+:String) [], Re    
+moteException
+    + FullyQualifie 
+   dErrorId : Nati  
+  veCommandError
+ 
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\sqlalch
+emy\dialects\postgre
+sql\asyncpg.py", 
+line 526, in 
+_prepare_and_execute
+    prepared_stmt, 
+attributes = await a
+dapt_connection._pre
+pare(
+                    
+            ^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
+^^^^
+        operation, s
+elf._invalidate_sche
+ma_cache_asof
+        ^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\sqlalch
+emy\dialects\postgre
+sql\asyncpg.py", 
+line 755, in 
+_prepare
+    prepared_stmt = 
+await self._connecti
+on.prepare(
+                    
+^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+        operation, n
+ame=self._prepared_s
+tatement_name_func()
+        ^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\asyncpg
+\connection.py", 
+line 638, in prepare
+    return await 
+self._prepare(
+           
+^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\asyncpg
+\connection.py", 
+line 657, in 
+_prepare
+    stmt = await 
+self._get_statement(
+           ^^^^^^^^^
+^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\asyncpg
+\connection.py", 
+line 443, in 
+_get_statement
+    statement = 
+await self._protocol
+.prepare(
+                ^^^^
+^^^^^^^^^^^^^^^^^^^^
+^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "asyncpg/prot
+ocol/protocol.pyx", 
+line 165, in prepare
+asyncpg.exceptions.D
+uplicatePreparedStat
+ementError: 
+prepared statement "
+__asyncpg_stmt_1__" 
+already exists
+HINT:  
+NOTE: pgbouncer 
+with pool_mode set 
+to "transaction" or
+"statement" does 
+not support 
+prepared statements 
+properly.
+You have two 
+options:
+
+* if you are using 
+pgbouncer for 
+connection pooling 
+to a
+  single server, 
+switch to the 
+connection pool 
+functionality
+  provided by 
+asyncpg, it is a 
+much better option 
+for this
+  purpose;
+
+* if you have no 
+option of avoiding 
+the use of 
+pgbouncer,
+  then you can set s
+tatement_cache_size 
+to 0 when creating
+  the asyncpg 
+connection object.
+
+
+The above exception 
+was the direct 
+cause of the 
+following exception:
+
+Traceback (most 
+recent call last):
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\sqlalch
+emy\engine\base.py",
+ line 1967, in 
+_exec_single_context
+    self.dialect.do_
+execute(
+    ~~~~~~~~~~~~~~~~
+~~~~~~~^
+        cursor, 
+str_statement, effec
+tive_parameters, 
+context
+        ^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\sqlalch
+emy\engine\default.p
+y", line 952, in 
+do_execute
+    cursor.execute(s
+tatement, 
+parameters)
+    ~~~~~~~~~~~~~~^^
+^^^^^^^^^^^^^^^^^^^^
+^
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\sqlalch
+emy\dialects\postgre
+sql\asyncpg.py", 
+line 585, in execute
+    self._adapt_conn
+ection.await_(
+    ~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~^
+        self._prepar
+e_and_execute(operat
+ion, parameters)
+        ^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\sqlalch
+emy\util\_concurrenc
+y_py3k.py", line 
+132, in await_only
+    return current.p
+arent.switch(awaitab
+le)  # type: ignore[
+no-any-return,attr-d
+efined] # noqa: E501
+           ~~~~~~~~~
+~~~~~~~~~~~~^^^^^^^^
+^^^
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\sqlalch
+emy\util\_concurrenc
+y_py3k.py", line 
+196, in 
+greenlet_spawn
+    value = await 
+result
+            
+^^^^^^^^^^^^
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\sqlalch
+emy\dialects\postgre
+sql\asyncpg.py", 
+line 563, in 
+_prepare_and_execute
+    self._handle_exc
+eption(error)
+    ~~~~~~~~~~~~~~~~
+~~~~~~^^^^^^^
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\sqlalch
+emy\dialects\postgre
+sql\asyncpg.py", 
+line 513, in 
+_handle_exception
+    self._adapt_conn
+ection._handle_excep
+tion(error)
+    ~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
+~~~~^^^^^^^
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\sqlalch
+emy\dialects\postgre
+sql\asyncpg.py", 
+line 797, in 
+_handle_exception
+    raise 
+translated_error 
+from error
+sqlalchemy.dialects.
+postgresql.asyncpg.A
+syncAdapt_asyncpg_db
+api.ProgrammingError
+: <class 'asyncpg.ex
+ceptions.DuplicatePr
+eparedStatementError
+'>: prepared 
+statement "__asyncpg
+_stmt_1__" already 
+exists
+HINT:  
+NOTE: pgbouncer 
+with pool_mode set 
+to "transaction" or
+"statement" does 
+not support 
+prepared statements 
+properly.
+You have two 
+options:
+
+* if you are using 
+pgbouncer for 
+connection pooling 
+to a
+  single server, 
+switch to the 
+connection pool 
+functionality
+  provided by 
+asyncpg, it is a 
+much better option 
+for this
+  purpose;
+
+* if you have no 
+option of avoiding 
+the use of 
+pgbouncer,
+  then you can set s
+tatement_cache_size 
+to 0 when creating
+  the asyncpg 
+connection object.
+
+
+The above exception 
+was the direct 
+cause of the 
+following exception:
+
+Traceback (most 
+recent call last):
+  File "<frozen 
+runpy>", line 198, 
+in 
+_run_module_as_main
+  File "<frozen 
+runpy>", line 88, 
+in _run_code
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Scrip
+ts\alembic.exe\__mai
+n__.py", line 6, in 
+<module>
+    sys.exit(main())
+             ~~~~^^
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\alembic
+\config.py", line 
+1047, in main
+    CommandLine(prog
+=prog).main(argv=arg
+v)
+    ~~~~~~~~~~~~~~~~
+~~~~~~~~~~~^^^^^^^^^
+^^
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\alembic
+\config.py", line 
+1037, in main
+    
+self.run_cmd(cfg, 
+options)
+    ~~~~~~~~~~~~^^^^
+^^^^^^^^^^
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\alembic
+\config.py", line 
+971, in run_cmd
+    fn(
+    ~~^
+        config,
+        ^^^^^^^
+        
+*[getattr(options, 
+k, None) for k in 
+positional],
+        ^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^
+        **{k: 
+getattr(options, k, 
+None) for k in 
+kwarg},
+        ^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\alembic
+\command.py", line 
+483, in upgrade
+    script.run_env()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\alembic
+\script\base.py", 
+line 545, in run_env
+    util.load_python
+_file(self.dir, 
+"env.py")
+    ~~~~~~~~~~~~~~~~
+~~~~~^^^^^^^^^^^^^^^
+^^^^^
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\alembic
+\util\pyfiles.py", 
+line 116, in 
+load_python_file
+    module = load_mo
+dule_py(module_id, 
+path)
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\alembic
+\util\pyfiles.py", 
+line 136, in 
+load_module_py
+    spec.loader.exec
+_module(module)  # 
+type: ignore
+    ~~~~~~~~~~~~~~~~
+~~~~~~~^^^^^^^^
+  File "<frozen impo
+rtlib._bootstrap_ext
+ernal>", line 1026, 
+in exec_module
+  File "<frozen impo
+rtlib._bootstrap>", 
+line 488, in _call_w
+ith_frames_removed
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\alembic\en
+v.py", line 101, in 
+<module>
+    run_migrations_o
+nline()
+    ~~~~~~~~~~~~~~~~
+~~~~~^^
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\alembic\en
+v.py", line 95, in r
+un_migrations_online
+    asyncio.run(run_
+async_migrations())
+    ~~~~~~~~~~~^^^^^
+^^^^^^^^^^^^^^^^^^^
+  File "C:\Program F
+iles\Python313\Lib\a
+syncio\runners.py", 
+line 195, in run
+    return 
+runner.run(main)
+           
+~~~~~~~~~~^^^^^^
+  File "C:\Program F
+iles\Python313\Lib\a
+syncio\runners.py", 
+line 118, in run
+    return self._loo
+p.run_until_complete
+(task)
+           ~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
+^^^^^^
+  File "C:\Program F
+iles\Python313\Lib\a
+syncio\base_events.p
+y", line 725, in 
+run_until_complete
+    return 
+future.result()
+           
+~~~~~~~~~~~~~^^
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\alembic\en
+v.py", line 86, in 
+run_async_migrations
+    async with conne
+ctable.connect() as 
+connection:
+               ~~~~~
+~~~~~~~~~~~~~~^^
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\sqlalch
+emy\ext\asyncio\base
+.py", line 121, in 
+__aenter__
+    return await sel
+f.start(is_ctxmanage
+r=True)
+           ^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
+^^^^^^^
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\sqlalch
+emy\ext\asyncio\engi
+ne.py", line 275, 
+in start
+    await greenlet_s
+pawn(self.sync_engin
+e.connect)
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\sqlalch
+emy\util\_concurrenc
+y_py3k.py", line 
+203, in 
+greenlet_spawn
+    result = context
+.switch(value)
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\sqlalch
+emy\engine\base.py",
+ line 3293, in 
+connect
+    return self._con
+nection_cls(self)
+           ~~~~~~~~~
+~~~~~~~~~~~^^^^^^
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\sqlalch
+emy\engine\base.py",
+ line 143, in 
+__init__
+    self._dbapi_conn
+ection = engine.raw_
+connection()
+                    
+         ~~~~~~~~~~~
+~~~~~~~~~~^^
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\sqlalch
+emy\engine\base.py",
+ line 3317, in 
+raw_connection
+    return 
+self.pool.connect()
+           
+~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\sqlalch
+emy\pool\base.py", 
+line 448, in connect
+    return _Connecti
+onFairy._checkout(se
+lf)
+           ~~~~~~~~~
+~~~~~~~~~~~~~~~~~^^^
+^^^
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\sqlalch
+emy\pool\base.py", 
+line 1272, in 
+_checkout
+    fairy = _Connect
+ionRecord.checkout(p
+ool)
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\sqlalch
+emy\pool\base.py", 
+line 712, in 
+checkout
+    rec = 
+pool._do_get()
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\sqlalch
+emy\pool\impl.py", 
+line 306, in _do_get
+    return self._cre
+ate_connection()
+           ~~~~~~~~~
+~~~~~~~~~~~~~~^^
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\sqlalch
+emy\pool\base.py", 
+line 389, in 
+_create_connection
+    return _Connecti
+onRecord(self)
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\sqlalch
+emy\pool\base.py", 
+line 674, in 
+__init__
+    self.__connect()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\sqlalch
+emy\pool\base.py", 
+line 914, in 
+__connect
+    )._exec_w_sync_o
+n_first_run(self.dba
+pi_connection, self)
+      ~~~~~~~~~~~~~~
+~~~~~~~~~~~^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\sqlalch
+emy\event\attr.py", 
+line 501, in _exec_w
+_sync_on_first_run
+    self(*args, 
+**kw)
+    
+~~~~^^^^^^^^^^^^^
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\sqlalch
+emy\event\attr.py", 
+line 515, in 
+__call__
+    fn(*args, **kw)
+    ~~^^^^^^^^^^^^^
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\sqlalch
+emy\util\langhelpers
+.py", line 1897, in 
+go
+    return 
+once_fn(*arg, **kw)
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\sqlalch
+emy\engine\create.py
+", line 773, in 
+first_connect
+    dialect.initiali
+ze(c)
+    ~~~~~~~~~~~~~~~~
+~~^^^
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\sqlalch
+emy\dialects\postgre
+sql\base.py", line 
+3340, in initialize
+    super().initiali
+ze(connection)
+    ~~~~~~~~~~~~~~~~
+~~^^^^^^^^^^^^
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\sqlalch
+emy\engine\default.p
+y", line 528, in 
+initialize
+    self.server_vers
+ion_info = self._get
+_server_version_info
+(
+                    
+           ~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
+^
+        connection
+        ^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\sqlalch
+emy\dialects\postgre
+sql\base.py", line 
+3610, in _get_server
+_version_info
+    v = connection.e
+xec_driver_sql("sele
+ct pg_catalog.versio
+n()").scalar()
+        ~~~~~~~~~~~~
+~~~~~~~~~~~~~~^^^^^^
+^^^^^^^^^^^^^^^^^^^^
+^^^^^
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\sqlalch
+emy\engine\base.py",
+ line 1779, in 
+exec_driver_sql
+    ret = self._exec
+ute_context(
+        dialect,
+    ...<5 lines>...
+        distilled_pa
+rameters,
+    )
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\sqlalch
+emy\engine\base.py",
+ line 1846, in 
+_execute_context
+    return self._exe
+c_single_context(
+           ~~~~~~~~~
+~~~~~~~~~~~~~~~~^
+        dialect, 
+context, statement, 
+parameters
+        ^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
+^^^^^^^
+    )
+    ^
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\sqlalch
+emy\engine\base.py",
+ line 1986, in 
+_exec_single_context
+    self._handle_dba
+pi_exception(
+    ~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~^
+        e, 
+str_statement, effec
+tive_parameters, 
+cursor, context
+        ^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
+^^^
+    )
+    ^
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\sqlalch
+emy\engine\base.py",
+ line 2363, in _hand
+le_dbapi_exception
+    raise sqlalchemy
+_exception.with_trac
+eback(exc_info[2]) 
+from e
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\sqlalch
+emy\engine\base.py",
+ line 1967, in 
+_exec_single_context
+    self.dialect.do_
+execute(
+    ~~~~~~~~~~~~~~~~
+~~~~~~~^
+        cursor, 
+str_statement, effec
+tive_parameters, 
+context
+        ^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\sqlalch
+emy\engine\default.p
+y", line 952, in 
+do_execute
+    cursor.execute(s
+tatement, 
+parameters)
+    ~~~~~~~~~~~~~~^^
+^^^^^^^^^^^^^^^^^^^^
+^
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\sqlalch
+emy\dialects\postgre
+sql\asyncpg.py", 
+line 585, in execute
+    self._adapt_conn
+ection.await_(
+    ~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~^
+        self._prepar
+e_and_execute(operat
+ion, parameters)
+        ^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\sqlalch
+emy\util\_concurrenc
+y_py3k.py", line 
+132, in await_only
+    return current.p
+arent.switch(awaitab
+le)  # type: ignore[
+no-any-return,attr-d
+efined] # noqa: E501
+           ~~~~~~~~~
+~~~~~~~~~~~~^^^^^^^^
+^^^
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\sqlalch
+emy\util\_concurrenc
+y_py3k.py", line 
+196, in 
+greenlet_spawn
+    value = await 
+result
+            
+^^^^^^^^^^^^
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\sqlalch
+emy\dialects\postgre
+sql\asyncpg.py", 
+line 563, in 
+_prepare_and_execute
+    self._handle_exc
+eption(error)
+    ~~~~~~~~~~~~~~~~
+~~~~~~^^^^^^^
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\sqlalch
+emy\dialects\postgre
+sql\asyncpg.py", 
+line 513, in 
+_handle_exception
+    self._adapt_conn
+ection._handle_excep
+tion(error)
+    ~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
+~~~~^^^^^^^
+  File "C:\Users\NIT
+RO\Documents\AI-agen
+t\backend\venv\Lib\s
+ite-packages\sqlalch
+emy\dialects\postgre
+sql\asyncpg.py", 
+line 797, in 
+_handle_exception
+    raise 
+translated_error 
+from error
+sqlalchemy.exc.Progr
+ammingError: (sqlalc
+hemy.dialects.postgr
+esql.asyncpg.Program
+mingError) <class 'a
+syncpg.exceptions.Du
+plicatePreparedState
+mentError'>: 
+prepared statement "
+__asyncpg_stmt_1__" 
+already exists
+HINT:  
+NOTE: pgbouncer 
+with pool_mode set 
+to "transaction" or
+"statement" does 
+not support 
+prepared statements 
+properly.
+You have two 
+options:
+
+* if you are using 
+pgbouncer for 
+connection pooling 
+to a
+  single server, 
+switch to the 
+connection pool 
+functionality
+  provided by 
+asyncpg, it is a 
+much better option 
+for this
+  purpose;
+
+* if you have no 
+option of avoiding 
+the use of 
+pgbouncer,
+  then you can set s
+tatement_cache_size 
+to 0 when creating
+  the asyncpg 
+connection object.
+
+[SQL: select pg_cata
+log.version()]
+(Background on this 
+error at: https://sq
+lalche.me/e/20/f405)
