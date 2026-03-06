@@ -1,3 +1,4 @@
 from app.core.database import Base
 from app.models.user import User
 from app.models.portfolio import Portfolio, Holding, Trade, Alert
+from app.models.news import NewsArticle

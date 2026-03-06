@@ -5,6 +5,8 @@ import { Heatmap } from '@/components/dashboard/Heatmap'
 import { OrderBook } from '@/components/dashboard/OrderBook'
 import { NewsFeed } from '@/components/dashboard/NewsFeed'
 import { EconomicCalendar } from '@/components/dashboard/EconomicCalendar'
+import { SentimentGauge } from '@/components/dashboard/SentimentGauge'
+import { AIPanel } from '@/components/dashboard/AIPanel'
 
 export default function DashboardPage() {
     return (
@@ -16,18 +18,23 @@ export default function DashboardPage() {
                 </div>
             </div>
 
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-                {/* Metric Cards placeholders */}
-                {Array.from({ length: 4 }).map((_, i) => (
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 mb-6">
+                {Array.from({ length: 3 }).map((_, i) => (
                     <div key={i} className="glass-panel p-6">
                         <div className="flex flex-row items-center justify-between space-y-0 pb-2">
-                            <h3 className="tracking-tight text-sm font-medium text-muted-foreground">Total P&L</h3>
+                            <h3 className="tracking-tight text-sm font-medium text-muted-foreground">Portfolio Metric</h3>
                             <Activity className="h-4 w-4 text-muted-foreground" />
                         </div>
-                        <div className="text-2xl font-bold text-green-500">+$12,345</div>
-                        <p className="text-xs text-muted-foreground mt-1">+2.5% from last month</p>
+                        <div className="text-2xl font-bold">---</div>
                     </div>
                 ))}
+                <div className="lg:col-span-1 p-0 m-0 h-full min-h-[220px]">
+                    <SentimentGauge symbol="BTCUSDT" />
+                </div>
+            </div>
+
+            <div className="grid gap-6 mb-6">
+                <AIPanel symbol="BTCUSDT" />
             </div>
 
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-7 mb-6">
